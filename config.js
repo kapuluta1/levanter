@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize')
+<xconst { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
 const path = require('path')
 const configPath = path.join(__dirname, './config.env')
@@ -9,7 +9,7 @@ const DATABASE_URL =
 process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID | | '  levanter_224d088a44a36345d48243022dbf47eea5  ).trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
